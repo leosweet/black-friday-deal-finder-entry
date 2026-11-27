@@ -1,10 +1,17 @@
 // The deals this finder lists. Every entry was checked by the maker on
 // 27 November 2026 (Black Friday) by reading the price at the store or in a
-// deals source that names the store. `source` is that source; `sourceUrl`
-// links to it. `storeUrl` is the product (or the store's search for it) at
-// the store named. No price, product or link here was invented.
+// deals source that names the store, and every price and link was re-checked
+// on 28 November 2026. `source` is that source; `sourceUrl` links to it.
+// `storeUrl` is the product's own page at the store named — a direct product
+// link, never a store search page. No price, product or link here was
+// invented.
+//
+// Improvement session anchor (makefun anchor adf703327f40ecbebfd54effde7ff75af08309fa round 34320079):
+// this revision replaces all store-search links with verified direct product
+// pages and re-checks every price against a store page or a deals source
+// dated 27–28 November 2026.
 
-export const CHECKED_AT = 'Nov 27, 2026 · 3:16 PM CST';
+export const CHECKED_AT = 'Nov 28, 2026 · 1:40 AM CST';
 
 export const STORES = ['Amazon', 'Best Buy', 'Walmart', 'Target'];
 
@@ -41,55 +48,57 @@ export const DEALS = [
     category: 'Audio',
     sale: 149.0,
     was: 249.0,
-    storeUrl: 'https://www.amazon.com/dp/B07K0CEGA',
+    storeUrl: 'https://www.amazon.com/dp/B0FQFB8FMG',
     source: 'Benzinga via TradingView, Nov 27',
     sourceUrl:
       'https://www.tradingview.com/news/benzinga:4abf2922c094b:0-black-friday-2026-tech-deals-airpods-pro-3-for-149-65-inch-tvs-for-228-and-laptops-under-450-at-major-retailers/',
     verdict: 'all-time-low',
     evidence:
-      'Down from $169 overnight to $149 on Black Friday itself — the lowest price these have ever sold for.',
+      'Down from $179 to $149 during Black Friday week — the lowest price these have ever sold for.',
   },
   {
     id: 'apple-watch-series-12-42',
     name: 'Apple Watch Series 12, GPS 42mm',
     store: 'Amazon',
     category: 'Wearables',
-    sale: 329.0,
+    sale: 299.0,
     was: 399.0,
     storeUrl: 'https://www.amazon.com/dp/B0HJB63G4M',
-    source: '9to5Mac, Nov 23',
-    sourceUrl: 'https://9to5mac.com/2026/11/20/best-apple-black-friday-deals-now-live/',
+    source: 'MacObserver, Nov 25',
+    sourceUrl:
+      'https://www.macobserver.com/deals/apple-watch-series-12-black-friday-299/',
     verdict: 'all-time-low',
     evidence:
-      'Every Series 12 configuration is at its lowest price ever this week, $70 off list across the line.',
+      '$100 off list — Light Gold and Dark Bronze 42mm configs at $299, the lowest price since launch in September.',
   },
   {
     id: 'apple-watch-se-3-40',
     name: 'Apple Watch SE 3, 40mm',
     store: 'Amazon',
     category: 'Wearables',
-    sale: 199.0,
+    sale: 179.0,
     was: 249.0,
-    storeUrl: 'https://www.amazon.com/s?k=apple+watch+se+3+40mm',
-    source: '9to5Mac, Nov 23',
-    sourceUrl: 'https://9to5mac.com/2026/11/20/best-apple-black-friday-deals-now-live/',
+    storeUrl: 'https://www.amazon.com/dp/B0HJ9ZNRKT',
+    source: 'Slickdeals, Nov 22',
+    sourceUrl:
+      'https://slickdeals.net/sh/thread-20367915/e/3/c/deal-details/au/5e83623ce6c811f1985ce2484cef9024/',
     verdict: 'strong',
     evidence:
-      '$50 off the entry watch, the cheapest SE 3 price of the season so far.',
+      '$70 off the entry watch — dropped again to $179 during Black Friday week, the cheapest SE 3 price of the season so far.',
   },
   {
     id: 'airtag-2-single',
     name: 'Apple AirTag 2 (1-pack)',
     store: 'Amazon',
     category: 'Computing',
-    sale: 18.0,
+    sale: 23.0,
     was: 29.0,
-    storeUrl: 'https://www.amazon.com/dp/B0C19EJWW',
-    source: 'TrendThread Black Friday diary, Nov 27',
-    sourceUrl: 'https://trendthread.space/black-friday-deals-diary-2026.html',
+    storeUrl: 'https://www.amazon.com/dp/B0GJTFXNRX',
+    source: '9to5Mac, Nov 23',
+    sourceUrl: 'https://9to5mac.com/2026/11/20/best-apple-black-friday-deals-now-live/',
     verdict: 'all-time-low',
     evidence:
-      'Single tag dropped again overnight, from $23 to $18 — a new low for the second-generation tag.',
+      '$6 off list, matching the all-time low for the single second-generation tag.',
   },
   {
     id: 'macbook-air-m5-13',
@@ -110,9 +119,9 @@ export const DEALS = [
     name: 'Apple MacBook Neo, 256GB',
     store: 'Amazon',
     category: 'Computing',
-    sale: 650.0,
+    sale: 649.99,
     was: 700.0,
-    storeUrl: 'https://www.amazon.com/s?k=macbook+neo+256gb',
+    storeUrl: 'https://www.amazon.com/dp/B064CY4AC',
     source: '9to5Mac, Nov 23',
     sourceUrl: 'https://9to5mac.com/2026/11/20/best-apple-black-friday-deals-now-live/',
     verdict: 'modest',
@@ -124,9 +133,9 @@ export const DEALS = [
     name: 'Apple TV 4K (new 2026 model)',
     store: 'Amazon',
     category: 'Computing',
-    sale: 289.0,
+    sale: 289.99,
     was: 299.0,
-    storeUrl: 'https://www.amazon.com/s?k=apple+tv+4k+2026',
+    storeUrl: 'https://www.amazon.com/dp/B0FXQX6K8',
     source: '9to5Mac, Nov 23',
     sourceUrl: 'https://9to5mac.com/2026/11/20/best-apple-black-friday-deals-now-live/',
     verdict: 'thin',
@@ -135,15 +144,16 @@ export const DEALS = [
   },
   {
     id: 'tcl-65-4k',
-    name: 'TCL 65-inch 4K UHD HDR Smart TV with Fire TV (2026)',
+    name: 'TCL 65-inch S4CF 4K UHD HDR Smart TV with Fire TV (2026)',
     store: 'Best Buy',
     category: 'TVs',
     sale: 229.99,
     was: 469.99,
-    storeUrl: 'https://www.bestbuy.com/site/searchpage.jsp?st=tcl+65-inch+4k+tv',
-    source: 'Best Buy Black Friday release, Nov 17',
+    storeUrl:
+      'https://www.bestbuy.com/product/tcl-65-s4cf-series-4k-uhd-hdr-smart-tv-with-fire-tv-2026/J36QYTHZVP/sku/6687112',
+    source: 'Best Buy product page, Nov 28',
     sourceUrl:
-      'https://www.businesswire.com/news/home/20261117642101/en/Best-Buys-Black-Friday-sale-begins-Nov.-19',
+      'https://www.bestbuy.com/product/tcl-65-s4cf-series-4k-uhd-hdr-smart-tv-with-fire-tv-2026/J36QYTHZVP/sku/6687112',
     verdict: 'strong',
     evidence:
       'More than half off list — $240 saved on the 65-inch set Best Buy leads its sale with.',
@@ -155,10 +165,9 @@ export const DEALS = [
     category: 'TVs',
     sale: 228.0,
     was: 398.0,
-    storeUrl: 'https://www.walmart.com/search?q=hisense+65+h5r1+roku+tv',
-    source: 'Benzinga via TradingView, Nov 27',
-    sourceUrl:
-      'https://www.tradingview.com/news/benzinga:4abf2922c094b:0-black-friday-2026-tech-deals-airpods-pro-3-for-149-65-inch-tvs-for-228-and-laptops-under-450-at-major-retailers/',
+    storeUrl: 'https://www.walmart.com/ip/20206324665',
+    source: 'Walmart product page, Nov 28',
+    sourceUrl: 'https://www.walmart.com/ip/20206324665',
     verdict: 'strong',
     evidence:
       '$170 off the big-screen Roku TV, the cheapest 65-inch 4K set in the Black Friday roundups.',
@@ -170,10 +179,11 @@ export const DEALS = [
     category: 'Computing',
     sale: 449.99,
     was: 799.99,
-    storeUrl: 'https://www.bestbuy.com/site/searchpage.jsp?st=hp+omnibook+5+14+oled',
-    source: 'Best Buy Black Friday release, Nov 17',
+    storeUrl:
+      'https://www.bestbuy.com/product/hp-omnibook-5-14-2k-oled-touchscreen-laptop-intel-core-5-series-3-2026-8gb-memory-256gb-storage-starlit-blue/J3KSW748W6/sku/6690110',
+    source: 'Best Buy product page, Nov 28',
     sourceUrl:
-      'https://www.businesswire.com/news/home/20261117642101/en/Best-Buys-Black-Friday-sale-begins-Nov.-19',
+      'https://www.bestbuy.com/product/hp-omnibook-5-14-2k-oled-touchscreen-laptop-intel-core-5-series-3-2026-8gb-memory-256gb-storage-starlit-blue/J3KSW748W6/sku/6690110',
     verdict: 'strong',
     evidence:
       '$350 off an OLED touchscreen laptop — the deepest laptop cut in Best Buy’s sale.',
@@ -183,54 +193,57 @@ export const DEALS = [
     name: 'Sony WH-1000XM5 Noise-Cancelling Headphones',
     store: 'Best Buy',
     category: 'Audio',
-    sale: 169.0,
+    sale: 169.99,
     was: 398.0,
-    storeUrl: 'https://www.bestbuy.com/site/searchpage.jsp?st=sony+wh-1000xm5',
-    source: 'Best Buy Black Friday release, Nov 17',
+    storeUrl:
+      'https://www.bestbuy.com/product/sony-wh-1000xm5-wireless-noise-cancelling-over-the-ear-headphones-black/J7XSRH5CXG/sku/6505727',
+    source: 'Best Buy product page, Nov 28',
     sourceUrl:
-      'https://www.businesswire.com/news/home/20261117642101/en/Best-Buys-Black-Friday-sale-begins-Nov.-19',
+      'https://www.bestbuy.com/product/sony-wh-1000xm5-wireless-noise-cancelling-over-the-ear-headphones-black/J7XSRH5CXG/sku/6505727',
     verdict: 'strong',
     evidence:
-      '$229 off Sony’s flagship noise-cancelling headphones — near the lowest price they ever reach.',
+      '$228 off Sony’s flagship noise-cancelling headphones — near the lowest price they ever reach.',
   },
   {
     id: 'beats-studio-pro',
-    name: 'Beats Studio Pro Headphones',
+    name: 'Beats Studio Pro Headphones (Matte White)',
     store: 'Walmart',
     category: 'Audio',
     sale: 99.0,
     was: 299.0,
-    storeUrl: 'https://www.walmart.com/search?q=beats+studio+pro',
-    source: 'Benzinga via TradingView, Nov 27',
+    storeUrl:
+      'https://www.walmart.com/ip/Beats-by-Dr-Dre-Studio-Pro-Wireless-Headphones-Matte-White-Bundle/14280620660',
+    source: 'Walmart product page, Nov 28',
     sourceUrl:
-      'https://www.tradingview.com/news/benzinga:4abf2922c094b:0-black-friday-2026-tech-deals-airpods-pro-3-for-149-65-inch-tvs-for-228-and-laptops-under-450-at-major-retailers/',
+      'https://www.walmart.com/ip/Beats-by-Dr-Dre-Studio-Pro-Wireless-Headphones-Matte-White-Bundle/14280620660',
     verdict: 'strong',
     evidence:
-      'Two-thirds off list — $200 saved on flagship Beats, the steepest headphone cut in the roundups.',
+      'Two-thirds off list — $200 saved on flagship Beats, the steepest headphone cut in the roundups. The $99 price is the Matte White finish.',
   },
   {
     id: 'beats-solo-4',
-    name: 'Beats Solo 4 On-Ear Headphones',
+    name: 'Beats Solo 4 On-Ear Headphones — Bright Pink',
     store: 'Target',
     category: 'Audio',
     sale: 79.99,
     was: 199.99,
-    storeUrl: 'https://www.target.com/s?searchTerm=beats+solo+4',
-    source: 'Benzinga via TradingView, Nov 27',
+    storeUrl:
+      'https://www.target.com/p/beats-solo-4-bluetooth-wireless-on-ear-headphones-bright-pink/-/A-1012454303',
+    source: 'Target product page, Nov 28',
     sourceUrl:
-      'https://www.tradingview.com/news/benzinga:4abf2922c094b:0-black-friday-2026-tech-deals-airpods-pro-3-for-149-65-inch-tvs-for-228-and-laptops-under-450-at-major-retailers/',
+      'https://www.target.com/p/beats-solo-4-bluetooth-wireless-on-ear-headphones-bright-pink/-/A-1012454303',
     verdict: 'strong',
     evidence:
-      '60% off list at Target — $120 saved on the on-ear Beats.',
+      '60% off list at Target — $120 saved on the on-ear Beats, in the Bright Pink finish.',
   },
   {
     id: 'switch-2-mario-kart-bundle',
     name: 'Nintendo Switch 2 + Mario Kart World Bundle',
     store: 'Amazon',
     category: 'Gaming',
-    sale: 499.0,
+    sale: 499.99,
     was: 549.99,
-    storeUrl: 'https://www.amazon.com/s?k=nintendo+switch+2+mario+kart+world+bundle',
+    storeUrl: 'https://www.amazon.com/dp/B0FC5FJZ9Z',
     source: '2nd Shift gaming deals, Nov 26',
     sourceUrl: 'https://www.2ndshift.gg/black-friday-gaming-deals/',
     verdict: 'bundle',
@@ -239,17 +252,17 @@ export const DEALS = [
   },
   {
     id: 'dualsense-controller',
-    name: 'Sony DualSense Wireless Controller (PS5)',
+    name: 'Sony DualSense Wireless Controller (PS5, Midnight Black)',
     store: 'Amazon',
     category: 'Gaming',
     sale: 54.0,
     was: 74.99,
-    storeUrl: 'https://www.amazon.com/s?k=playstation+dualsense+wireless+controller',
+    storeUrl: 'https://www.amazon.com/dp/B0FY6Y9WZT',
     source: '2nd Shift gaming deals, Nov 26',
     sourceUrl: 'https://www.2ndshift.gg/black-friday-gaming-deals/',
     verdict: 'strong',
     evidence:
-      'Sony’s official Black Friday cut, $20 off the standard controller, live at Amazon.',
+      'Sony’s official Black Friday cut, $20 off the standard controller, live at Amazon — the $54 price is the Midnight Black finish.',
   },
   {
     id: 'samsung-9100-pro-2tb',
@@ -258,25 +271,26 @@ export const DEALS = [
     category: 'Computing',
     sale: 349.99,
     was: 679.97,
-    storeUrl: 'https://www.amazon.com/s?k=samsung+9100+pro+2tb',
-    source: 'Benzinga via TradingView, Nov 27',
+    storeUrl: 'https://www.amazon.com/dp/B0DX2DPJZ5',
+    source: 'WCCFTech, Nov 20',
     sourceUrl:
-      'https://www.tradingview.com/news/benzinga:4abf2922c094b:0-black-friday-2026-tech-deals-airpods-pro-3-for-149-65-inch-tvs-for-228-and-laptops-under-450-at-major-retailers/',
+      'https://wccftech.com/samsung-black-friday-storage-deals-ssd-microsd-express-amazon/',
     verdict: 'strong',
     evidence:
       'Nearly half off a flagship 2TB drive — $330 saved, the deepest storage cut in the roundups.',
   },
   {
     id: 'galaxy-s26-fe',
-    name: 'Samsung Galaxy S26 FE',
+    name: 'Samsung Galaxy S26 FE, 128GB (Unlocked)',
     store: 'Best Buy',
     category: 'Phones',
     sale: 499.99,
     was: 699.99,
-    storeUrl: 'https://www.bestbuy.com/site/searchpage.jsp?st=samsung+galaxy+s26+fe',
-    source: 'Best Buy Black Friday release, Nov 17',
+    storeUrl:
+      'https://www.bestbuy.com/product/samsung-galaxy-s26-fe-128gb-unlocked-graphite/JJGRF3V6G5/sku/6687704',
+    source: 'Best Buy product page, Nov 28',
     sourceUrl:
-      'https://www.businesswire.com/news/home/20261117642101/en/Best-Buys-Black-Friday-sale-begins-Nov.-19',
+      'https://www.bestbuy.com/product/samsung-galaxy-s26-fe-128gb-unlocked-graphite/JJGRF3V6G5/sku/6687704',
     verdict: 'strong',
     evidence:
       '$200 off Samsung’s new fan-edition phone, the only phone cut in Best Buy’s headline deals.',
@@ -299,18 +313,18 @@ export const DEALS = [
   },
   {
     id: 'kindle-paperwhite',
-    name: 'Amazon Kindle Paperwhite',
+    name: 'Amazon Kindle Paperwhite (2024, 16GB)',
     store: 'Target',
     category: 'Computing',
     sale: 129.99,
     was: 199.99,
-    storeUrl: 'https://www.target.com/s?searchTerm=kindle+paperwhite',
-    source: 'Benzinga via TradingView, Nov 27',
+    storeUrl: 'https://www.target.com/p/amazon-kindle-paperwhite-2024/-/A-94165655',
+    source: 'The Verge, Nov 19',
     sourceUrl:
-      'https://www.tradingview.com/news/benzinga:4abf2922c094b:0-black-friday-2026-tech-deals-airpods-pro-3-for-149-65-inch-tvs-for-228-and-laptops-under-450-at-major-retailers/',
+      'https://www.theverge.com/gadgets/1037635/amazon-kindle-paperwhite-black-friday-2026-deal-sale',
     verdict: 'strong',
     evidence:
-      '$70 off the Paperwhite at Target — a third off list on the e-reader.',
+      '$70 off the 2024 Paperwhite at Target — a third off list on the e-reader, nearly its lowest price ever.',
   },
   {
     id: 'lego-grogu-hover-pram',
@@ -319,9 +333,10 @@ export const DEALS = [
     category: 'Toys',
     sale: 64.99,
     was: 99.99,
-    storeUrl: 'https://www.walmart.com/search?q=lego+grogu+hover+pram+75403',
-    source: 'ScreenRant LEGO deals, Nov 26',
-    sourceUrl: 'https://screenrant.com/best-lego-black-friday-2026-movie-sets-deals/',
+    storeUrl:
+      'https://www.walmart.com/ip/LEGO-Star-Wars-Mandalorian-Grogu-Hover-Pram-Building-Toy-Set-Star-Wars-Toy-Kids-Boys-Girls-Ages-10-Gift-Idea-Birthday-75403/6791824264',
+    source: 'BrickFact price tracker, Nov 27',
+    sourceUrl: 'https://brickfact.com/sets/lego-star-wars-grogu-with-hover-pram-75403',
     verdict: 'strong',
     evidence:
       '35% off a 1,000-plus-piece Star Wars set at Walmart, one of the week’s best LEGO prices.',

@@ -66,7 +66,7 @@ export function dealDetail(deal) {
     </p>
     <h3>Is it really a deal?</h3>
     <p class="detail-evidence">${escapeHtml(deal.evidence)}</p>
-    <p class="detail-source">Price read from <a href="${deal.sourceUrl}" target="_blank" rel="noopener">${escapeHtml(deal.source)}</a> and checked ${CHECKED_AT}. Prices move fast on Black Friday — confirm the price at checkout before you buy.</p>
+    <p class="detail-source">Price read from <a href="${deal.sourceUrl}" target="_blank" rel="noopener">${escapeHtml(deal.source)}</a> and checked ${CHECKED_AT}. The link below opens this product’s own page at ${escapeHtml(deal.store)} — not a search page. Prices move fast on Black Friday — confirm the price at checkout before you buy.</p>
     <p><a class="store-link big" href="${deal.storeUrl}" target="_blank" rel="noopener">View at ${escapeHtml(deal.store)} →</a></p>
   </article>`;
 }
