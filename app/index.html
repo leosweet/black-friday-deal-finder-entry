@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Friday Beacon — Real Black Friday &amp; Cyber Monday Deals, Checked Today</title>
+<meta name="description" content="A Black Friday and Cyber Monday deal finder. Every deal was checked at its store on 27 November 2026, with sale price, usual price, discount and an honest verdict on whether it is really a deal.">
+<link rel="stylesheet" href="./style.css">
+<script type="module" src="./app.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <p class="kicker">Black Friday · Nov 27 — Cyber Monday · Nov 30, 2026</p>
+    <h1>Black Friday Beacon</h1>
+    <p class="lede">Real deals, checked today — not every “sale” is a bargain. Each listing shows the sale
+    price, the usual price, the saving, and an honest verdict on whether it is really a deal.</p>
+    <p class="stats" id="stats"></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="detail-view" hidden></section>
+
+  <section id="list-view">
+    <div class="toolbar" role="search">
+      <label class="search-label" for="search">Search deals</label>
+      <input id="search" type="search" placeholder="Try “airpods”, “tv”, “lego”…" autocomplete="off">
+      <div class="chip-row" id="category-chips" aria-label="Filter by category"></div>
+      <div class="select-row">
+        <label>Store
+          <select id="store-filter"></select>
+        </label>
+        <label>Discount
+          <select id="discount-filter"></select>
+        </label>
+        <label>Verdict
+          <select id="verdict-filter"></select>
+        </label>
+        <label>Sort by
+          <select id="sort"></select>
+        </label>
+      </div>
+      <p class="count" id="result-count"></p>
+    </div>
+
+    <div class="grid" id="deal-grid"></div>
+
+    <aside class="method">
+      <h2>How these deals were checked</h2>
+      <p>Every deal on this page was found and checked by the maker on Black Friday, 27 November 2026,
+      by reading the price at the store itself or in a deals source that names the store. The source of
+      each price is named on its deal page, with the time it was checked. Nothing here is a guess: if a
+      price could not be verified, the product is not listed.</p>
+      <h3>What the verdicts mean</h3>
+      <ul>
+        <li><span class="badge verdict-all-time-low">All-time low</span> — the lowest price the deal trackers have seen for this item.</li>
+        <li><span class="badge verdict-strong">Strong deal</span> — a deep cut off list price, at or near the year’s best.</li>
+        <li><span class="badge verdict-bundle">Bundle value</span> — the saving comes from what is bundled in, not a price cut.</li>
+        <li><span class="badge verdict-modest">Modest cut</span> — a real cut, but small against the list price.</li>
+        <li><span class="badge verdict-thin">Barely a deal</span> — barely below list; only worth it if you wanted it anyway.</li>
+      </ul>
+      <p class="fineprint">Prices move fast on Black Friday and stock runs out. Check the price at checkout
+      before you buy — the store’s price is the one that counts. This finder is an independent guide; it
+      is not affiliated with Amazon, Best Buy, Walmart, Target, or any brand listed.</p>
+    </aside>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Black Friday Beacon · All prices checked Nov 27, 2026 · 3:16 PM CST · Prices in US dollars.</p>
+</footer>
+</body>
+</html>
